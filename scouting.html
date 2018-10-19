@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scouting Form</title>
+		<style type="text/css">
+			body {
+				font-family: Arial;
+				background: white;
+			}
+			fieldset {
+				border: 2px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="post" action="/">
+			<div style="width: 50%; margin: auto; color: #8800FF">
+				<fieldset>
+					<legend>Match</legend>
+					Match Number:
+					<input type="number" name="match" min="1"><br><br>
+					Autonomous Winner:
+					<input type="radio" name="autonomousWinner" value="none" checked>None
+					<input type="radio" name="autonomousWinner" value="red">Red
+					<input type="radio" name="autonomousWinner" value="blue">Blue
+					<br><br>
+					Stationary High Stack:
+					<input type="radio" name="highStackStationary" value="none" checked>None
+					<input type="radio" name="highStackStationary" value="red">Red
+					<input type="radio" name="highStackStationary" value="blue">Blue
+					<br>
+					5 Point Zone High Stack:
+					<input type="radio" name="highStack5" value="none" checked>None
+					<input type="radio" name="highStack5" value="red">Red
+					<input type="radio" name="highStack5" value="blue">Blue
+					<br>
+					10 Point Zone High Stack:
+					<input type="radio" name="highStack10" value="none" checked>None
+					<input type="radio" name="highStack10" value="red">Red
+					<input type="radio" name="highStack10" value="blue">Blue
+					<br>
+					20 Point Zone High Stack:
+					<input type="radio" name="highStack20" value="none" checked>None
+					<input type="radio" name="highStack20" value="red">Red
+					<input type="radio" name="highStack20" value="blue">Blue
+					<br>
+				</fieldset>
+			</div>
+
+
+
+			<div style="width: 50%; float: left;  color: red;">
+				<fieldset>
+					<legend>Red Alliance</legend>
+					<div style="width: 50%; float: left;">
+						<fieldset>
+							<legend>Team 1</legend>
+							<b>Number:</b>
+							<input type="text" name="red_team1" required><br>
+							Robot Type:
+							<select name="red_team1_type">
+								<option value="na">--</option>
+								<option value="drfb">Double Reverse</option>
+								<option value="sl">Scissor Lift</option>
+								<option value="el">Elevator Lift</option>
+								<option value="cb">Chain Bar</option>
+								<option value="nb">Four/Six/Eight Bar</option>
+								<option value="nbcb">N-Bar + Chain Bar</option>
+								<option value="mg">Mobile Goal Robot</option>
+								<option value="o">Other</option>
+							</select><br>
+							Autonomous Ran:
+							<select name="red_team1_autonomous">
+								<option value="na">--</option>
+								<option vlaue="none">None</option>
+								<option vlaue="none">Failed</option>
+								<option vlaue="mg">Mobile Goal</option>
+								<option value="s">Stationary</option>
+								<option value="d">Defensive</option>
+								<option value="5">5 Point</option>
+								<option value="10">10 Point</option>
+								<option value="20">20 Point</option>
+								<option vlaue="o">Other</option>
+							</select><br>
+							<!--<u>Robot Capabilities Shown</u><br>
+							<input type="checkbox" name="red_team1_stationary" value="true">Stationary Goal<br>
+							<input type="checkbox" name="red_team1_10point" value="true">10 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="red_team1_20point" value="true">20 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="red_team1_rescore" value="true">10 Point Rescore<br>
+							<input type="checkbox" name="red_team1_control" value="true">Driver Control Loads<br>-->
+							<u>Issues</u><br>
+							<textarea name="red_team1_issues" rows="5" cols="25"></textarea><br>
+							<u>Notes</u><br>
+							<textarea name="red_team1_notes" rows="5" cols="25"></textarea>
+						</fieldset>
+					</div>
+					<div style="width: 50%; float: right;">
+						<fieldset>
+							<legend>Team 2</legend>
+							<b>Number:</b>
+							<input type="text" name="red_team2" required><br>
+							Robot Type:
+							<select name="red_team2_type">
+								<option value="na">--</option>
+								<option value="drfb">Double Reverse</option>
+								<option value="sl">Scissor Lift</option>
+								<option value="el">Elevator Lift</option>
+								<option value="cb">Chain Bar</option>
+								<option value="nb">Four/Six/Eight Bar</option>
+								<option value="nbcb">N-Bar + Chain Bar</option>
+								<option value="mg">Mobile Goal Robot</option>
+								<option value="o">Other</option>
+							</select><br>
+							Autonomous Ran:
+							<select name="red_team2_autonomous">
+								<option value="na">--</option>
+								<option vlaue="none">None</option>
+								<option vlaue="none">Failed</option>
+								<option vlaue="mg">Mobile Goal</option>
+								<option value="s">Stationary</option>
+								<option value="d">Defensive</option>
+								<option value="5">5 Point</option>
+								<option value="10">10 Point</option>
+								<option value="20">20 Point</option>
+								<option vlaue="o">Other</option>
+							</select><br>
+							<!--<u>Robot Capabilities Shown</u><br>
+							<input type="checkbox" name="red_team2_stationary" value="true">Stationary Goal<br>
+							<input type="checkbox" name="red_team2_10point" value="true">10 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="red_team2_20point" value="true">20 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="red_team2_rescore" value="true">10 Point Rescore<br>
+							<input type="checkbox" name="red_team2_control" value="true">Driver Control Loads<br>-->
+							<u>Issues</u><br>
+							<textarea name="red_team2_issues" rows="5" cols="30"></textarea><br>
+							<u>Notes</u><br>
+							<textarea name="red_team2_notes" rows="5" cols="30"></textarea>
+						</fieldset>
+					</div>
+
+					<div>
+						
+						<b>Dominant Team:</b>
+						<input type="radio" name="red_dominant" value="none" required checked>None
+						<input type="radio" name="red_dominant" value="team1" required>Team 1
+						<input type="radio" name="red_dominant" value="team2" required>Team 2
+
+						<br><br>
+						<u>Number of Mobile Goals</u><br>
+						5 Point Zone:
+						<select name="red_5pointzone">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<br>
+						10 Point Zone:
+						<select name="red_10pointzone">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<br>
+						20 Point Zone:
+						<select name="red_20pointzone">
+							<option value="0">0</option>
+							<option value="1">1</option>
+						</select>
+
+						<br><br>
+						<b>Final Score:</b>
+						<input type="number" name="red_score" min="0" required>
+						
+					</div>
+					
+				</fieldset>
+			</div>
+
+
+
+			<div style="width: 50%; float: left;  color: blue">
+				<fieldset>
+					<legend>Blue Alliance</legend>
+					<div style="width: 50%; float: left;">
+						<fieldset>
+							<legend>Team 1</legend>
+							<b>Number:</b>
+							<input type="text" name="blue_team1" required><br>
+							Robot Type:
+							<select name="blue_team1_type">
+								<option value="na">--</option>
+								<option value="drfb">Double Reverse</option>
+								<option value="sl">Scissor Lift</option>
+								<option value="el">Elevator Lift</option>
+								<option value="cb">Chain Bar</option>
+								<option value="nb">Four/Six/Eight Bar</option>
+								<option value="nbcb">N-Bar + Chain Bar</option>
+								<option value="mg">Mobile Goal Robot</option>
+								<option value="o">Other</option>
+							</select><br>
+							Autonomous Ran:
+							<select name="blue_team1_autonomous">
+								<option value="na">--</option>
+								<option vlaue="none">None</option>
+								<option vlaue="none">Failed</option>
+								<option vlaue="mg">Mobile Goal</option>
+								<option value="s">Stationary</option>
+								<option value="d">Defensive</option>
+								<option value="5">5 Point</option>
+								<option value="10">10 Point</option>
+								<option value="20">20 Point</option>
+								<option vlaue="o">Other</option>
+							</select><br>
+							<!--<u>Robot Capabilities Shown</u><br>
+							<input type="checkbox" name="blue_team1_stationary" value="true">Stationary Goal<br>
+							<input type="checkbox" name="blue_team1_10point" value="true">10 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="blue_team1_20point" value="true">20 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="blue_team1_rescore" value="true">10 Point Rescore<br>
+							<input type="checkbox" name="blue_team1_control" value="true">Driver Control Loads<br>-->
+							<u>Issues</u><br>
+							<textarea name="blue_team1_issues" rows="5" cols="25"></textarea><br>
+							<u>Notes</u><br>
+							<textarea name="blue_team1_notes" rows="5" cols="25"></textarea>
+						</fieldset>
+					</div>
+					<div style="width: 50%; float: right;">
+						<fieldset>
+							<legend>Team 2</legend>
+							<b>Number:</b>
+							<input type="text" name="blue_team2" required><br>
+							Robot Type:
+							<select name="blue_team2_type">
+								<option value="na">--</option>
+								<option value="drfb">Double Reverse</option>
+								<option value="sl">Scissor Lift</option>
+								<option value="el">Elevator Lift</option>
+								<option value="cb">Chain Bar</option>
+								<option value="nb">Four/Six/Eight Bar</option>
+								<option value="nbcb">N-Bar + Chain Bar</option>
+								<option value="mg">Mobile Goal Robot</option>
+								<option value="o">Other</option>
+							</select><br>
+							Autonomous Ran:
+							<select name="blue_team2_autonomous">
+								<option value="na">--</option>
+								<option vlaue="none">None</option>
+								<option vlaue="none">Failed</option>
+								<option vlaue="mg">Mobile Goal</option>
+								<option value="s">Stationary</option>
+								<option value="d">Defensive</option>
+								<option value="5">5 Point</option>
+								<option value="10">10 Point</option>
+								<option value="20">20 Point</option>
+								<option vlaue="o">Other</option>
+							</select><br>
+							<!--<u>Robot Capabilities Shown</u><br>
+							<input type="checkbox" name="blue_team2_stationary" value="true">Stationary Goal<br>
+							<input type="checkbox" name="blue_team2_10point" value="true">10 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="blue_team2_20point" value="true">20 Point Zone Mobile Goal<br>
+							<input type="checkbox" name="blue_team2_rescore" value="true">10 Point Rescore<br>
+							<input type="checkbox" name="blue_team2_control" value="true">Driver Control Loads<br>-->
+							<u>Issues</u><br>
+							<textarea name="blue_team2_issues" rows="5" cols="30"></textarea><br>
+							<u>Notes</u><br>
+							<textarea name="blue_team2_notes" rows="5" cols="30"></textarea>
+						</fieldset>
+					</div>
+
+					<div>
+
+						<b>Dominant Team:</b>
+						<input type="radio" name="blue_dominant" value="none" required checked>None
+						<input type="radio" name="blue_dominant" value="team1" required>Team 1
+						<input type="radio" name="blue_dominant" value="team2" required>Team 2
+
+						<br><br>
+						<u>Number of Mobile Goals</u><br>
+						5 Point Zone:
+						<select name="blue_5pointzone">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<br>
+						10 Point Zone:
+						<select name="blue_10pointzone">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+						<br>
+						20 Point Zone:
+						<select name="blue_20pointzone">
+							<option value="0">0</option>
+							<option value="1">1</option>
+						</select>
+
+						<br><br>
+						<b>Final Score:</b>
+						<input type="number" name="blue_score" min="0" required>
+						
+					</div>
+					
+				</fieldset>
+			</div>
+
+			<input type="submit" onclick="return confirm('This action cannot be undone.\nAre you sure that you want to submit this form?');">
+
+		</form>
+	</body>
+</html>
